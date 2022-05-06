@@ -5,7 +5,9 @@ PuppetLint.new_check(:manifest_whitespace_arrows_single_space_after) do
     tokens.select { |token| token.type == :FARROW }.each do |token|
       next_token = token.next_token
 
-      next unless next_token && !is_single_space(next_token)
+      next if not next_token
+      next if next_token.type == :NEWLINE
+      next if is_single_space(next_token)
 
       notify(
         :error,

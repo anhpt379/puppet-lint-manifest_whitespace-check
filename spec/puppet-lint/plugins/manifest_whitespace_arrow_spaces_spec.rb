@@ -157,6 +157,8 @@ describe 'manifest_whitespace_arrows_single_space_after' do
           param2 => 'value2',
           param3 =>   'value3',
           param4 =>  'value4',
+          param5 =>
+            'value5',
         }
       EOF
     end
@@ -198,6 +200,8 @@ describe 'manifest_whitespace_arrows_single_space_after' do
               param2 => 'value2',
               param3 => 'value3',
               param4 => 'value4',
+              param5 =>
+                'value5',
             }
           EOF
         )
